@@ -7,6 +7,30 @@
     android:background="@android:color/white"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="10dp"
+        android:clickable="true"
+        android:contentDescription="@string/app_name"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardCornerRadius="80dp"
+        app:cardElevation="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.13">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_user_24"
+            android:visibility="visible" />
+
+    </androidx.cardview.widget.CardView>
+
     <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/bottomBar"
         android:layout_width="match_parent"
