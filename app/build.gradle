@@ -1,6 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -14,6 +15,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //for WARNING ==> Resource references will not work correctly in images generated for this vector icon for API < 21; check generated icon to make sure it looks acceptable
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -21,6 +25,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    buildFeatures {
+        dataBinding true
     }
 }
 
@@ -30,7 +37,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.1'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
-    testImplementation 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
@@ -41,9 +48,5 @@ dependencies {
     implementation 'com.flaviofaria:kenburnsview:1.0.7'
 
     implementation 'com.github.ibrahimsn98:SmoothBottomBar:1.7.6'
-
-
-
-
 
 }
