@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvProfile"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="10dp"
@@ -30,6 +31,42 @@
             android:visibility="visible" />
 
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Hello Cengiz"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cvProfile"
+        app:layout_constraintEnd_toStartOf="@+id/cvProfile"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cvProfile" />
+
+
+    <TextView
+        android:id="@+id/textWhereAreWe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="Where We Are"
+        android:textColor="@color/text_color"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/cvProfile" />
+
+    <TextView
+        android:id="@+id/textGoing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="going today?"
+        android:textColor="#757575"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/textWhereAreWe" />
+
 
     <me.ibrahimsn.lib.SmoothBottomBar
         android:id="@+id/bottomBar"
